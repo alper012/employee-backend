@@ -1,3 +1,3 @@
 module.exports = {
-  url: "mongodb://localhost:27017/employee_db"
+  HOST: "mongodb+srv://admin:admin123@cluster0.1cmgjvb.mongodb.net/test"
 };

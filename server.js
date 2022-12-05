@@ -17,8 +17,7 @@ const db = require("./app/models");
 const Role = db.role;
 
 db.mongoose
-connect(db.url,
-   {
+  .connect(`${dbConfig.HOST}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -38,10 +37,8 @@ require("./app/routes/user.routes")(app);
 require("./app/routes/employee.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
-});
+const PORT = process.env.PORT || 8081;
+
 
 function initial() {
   Role.estimatedDocumentCount((err, count) => {
