@@ -1,5 +1,3 @@
 module.exports = {
-  HOST: "localhost",
-  PORT: 27017,
-  DB: "employee_db"
+  url: "mongodb://localhost:27017/employee_db"
 };
